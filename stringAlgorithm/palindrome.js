@@ -14,8 +14,10 @@ function ispalindrome(s){
 //ispalindrome("abbac");
 
 
-
-let s = "ABACDABA";
+//let s = "aacecaaa";
+//let s = "toyotoo"
+let s = "ababbcc"
+//let s = "ABACDABA";
 let cnt = 0;
 let flag = 0;
 while (s.length > 0){   
@@ -42,7 +44,7 @@ console.log(cnt);
       return i >= j ||
              isPalindrome(s.charAt(j) + s.substring(i, j + 1)) ||
              isPalindrome(s.substring(i, j + 1) + s.charAt(i));
-             console.log(s);
+             //console.log(s);
     }
     function isPalindrome(s){
       let i = 0, j = s.length- 1;
@@ -55,6 +57,6 @@ console.log(cnt);
       return i >= j;
     }
     
-    //let s = "aacecaaa";
+   
   
     canConverttoPalindrome(s);
