@@ -1,3 +1,4 @@
+/*
 function ispalindrome(s){
     let l = s.length;
     //let j;
@@ -13,10 +14,10 @@ function ispalindrome(s){
 }
 //ispalindrome("abbac");
 
-
+let s = "level";
 //let s = "aacecaaa";
 //let s = "toyotoo"
-let s = "ababbcc"
+//let s = "ababbcc"
 //let s = "ABACDABA";
 let cnt = 0;
 let flag = 0;
@@ -60,3 +61,19 @@ console.log(cnt);
    
   
     canConverttoPalindrome(s);
+
+*/
+    function properprefix(s)  {
+      let pi = new Array(s.length + 1).fill(0);
+      pi[0] = -1;
+      let k = -1;
+      for (let i = 1; i <= s.length; i++) {
+      while(k >= 0 && s[k] != s[i - 1]) k = pi[k];
+      pi[i] = ++k;
+      }
+      return s.substring(0, pi[s.length]);
+      }
+      let s ="ababab";
+     // let s = "level";
+      console.log(properprefix(s));
+      //console.log(properprefix("ababab"));
