@@ -14,13 +14,13 @@ function preorderTraversal(root){
     preorderTraversal(root.right);
 }
 
-// function postorderTraversal(root){
-//     if(root == null) return; //base case
-//     //left , right, root
-//     postorderTraversal(root.left);
-//     postorderTraversal(root.right);
-//     console.log(root.data);
-// }
+function postorderTraversal(root){
+    if(root == null) return; //base case
+    //left , right, root
+    postorderTraversal(root.left);
+    postorderTraversal(root.right);
+    console.log(root.data);
+}
 
 // function inorderTraversal(root){
 //     if(root == null) return; //base case
@@ -37,3 +37,5 @@ root.left.left = new Node(4);
 root.left.right = new Node(6);
 root.right.right = new Node(19);
 preorderTraversal(root);
+console.log("----------------");
+postorderTraversal(root);
