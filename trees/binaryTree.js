@@ -67,17 +67,17 @@ function inorderTraversal(root){
 }
 
 let root = new Node(10);
-// inorderTraversal(root);
-// console.log("--------------------");
+inorderTraversal(root);
+console.log("--------------------");
 insertInBST(root, 100);
-// inorderTraversal(root);
-// console.log("--------------------");
+inorderTraversal(root);
+console.log("--------------------");
 insertInBST(root, 5);
-// inorderTraversal(root);
-// console.log("--------------------");
+inorderTraversal(root);
+console.log("--------------------");
 insertInBST(root, 15);
-// inorderTraversal(root);
-// console.log("--------------------");
+inorderTraversal(root);
+console.log("--------------------");
 insertInBST(root, 1);
 inorderTraversal(root);
 console.log("--------------------");
