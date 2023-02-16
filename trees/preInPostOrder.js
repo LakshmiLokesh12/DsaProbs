@@ -36,8 +36,8 @@ root.right = new Node(15);
 root.left.left = new Node(4);
 root.left.right = new Node(6);
 root.right.right = new Node(19);
-root.right.left = new Node(24);
-root.left.left.left = new Node(30);
+// root.right.left = new Node(24);
+// root.left.left.left = new Node(30);
 preorderTraversal(root);
 console.log("----------------");
 postorderTraversal(root);
@@ -60,3 +60,19 @@ function heightOfTree(root){
 }
 let height = heightOfTree(root);
 console.log(height);
+
+
+function depthOfTree(root){
+    if(root == null){
+        return 0;
+    }
+
+    let leftSubtreeHeight = depthOfTree(root.left);
+    let rightSubtreeHeight = depthOfTree(root.right);
+
+    let currHeight = Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1;
+    return currHeight; 
+}
+console.log("************")
+let depth = depthOfTree(root);
+console.log(depth);
