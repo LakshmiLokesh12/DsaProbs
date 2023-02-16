@@ -22,13 +22,13 @@ function postorderTraversal(root){
     console.log(root.data);
 }
 
-// function inorderTraversal(root){
-//     if(root == null) return; //base case
-//     // left ,root, right
-//     inorderTraversal(root.left);
-//     console.log(root.data);
-//     inorderTraversal(root.right);
-// }
+function inorderTraversal(root){
+    if(root == null) return; //base case
+    // left ,root, right
+    inorderTraversal(root.left);
+    console.log(root.data);
+    inorderTraversal(root.right);
+}
 
 let root = new Node(10);
 root.left = new Node(5);
@@ -39,3 +39,5 @@ root.right.right = new Node(19);
 preorderTraversal(root);
 console.log("----------------");
 postorderTraversal(root);
+console.log("--------------------");
+inorderTraversal(root);
