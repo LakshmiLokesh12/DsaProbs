@@ -24,6 +24,7 @@ root.right = new Node(15);
 root.left.left = new Node(4);
 root.left.right = new Node(6);
 root.right.right = new Node(19);
+root.right.left = new Node(21);
 printLevelK(root, 0, 2);
 
 function heightOfTree(root){
@@ -69,3 +70,15 @@ function isBST(node, minimum, maximum){
 }
 console.log("********")
 console.log(isValidBST(root));
+
+function isSymmetric(root){
+    return symmetricHelper(root.left, root.right);
+}
+
+function symmetricHelper(x, y){
+    if(x == null && y== null) return true; //both are null
+    if(x == null || y== null) return false; //any one of them is null
+    return symmetricHelper(x.left, y.left) && symmetricHelper(x.right, y.right);//both are not null
+}
+
+console.log(isSymmetric(root));
