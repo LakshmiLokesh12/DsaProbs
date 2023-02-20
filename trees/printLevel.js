@@ -1,5 +1,3 @@
-
-
 class Node{
     constructor(data){
         this.data = data;
@@ -49,3 +47,25 @@ function printAllLevels(root){ //n + (n*height)=> O(n*height)
     }
 }
 printAllLevels(root);
+
+function isValidBST(root){
+    return isBST(root, Number.MIN_VALUE, Number.MAX_VALUE);
+}
+
+//minimum = maximum of left subtree, maximum => minimum of right subtree
+function isBST(node, minimum, maximum){
+    if(node == null){ //base case
+        return true;
+    }
+
+    if(minimum > node.data || node.data > maximum){
+        return false;
+    }
+
+    let leftSubtreeIsBST = isBST(node.left, minimum, node.data);
+    let rightSubtreeIsBST = isBST(node.right, node.data, maximum);
+
+    return leftSubtreeIsBST && rightSubtreeIsBST;
+}
+console.log("********")
+console.log(isValidBST(root));
