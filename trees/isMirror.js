@@ -6,7 +6,12 @@ class Node{
         this.right = null;
     }
 }
-
+let root = new Node(10);
+root.left = new Node(5);
+root.right = new Node(15);
+root.left.left = new Node(4);
+root.left.right = new Node(6);
+root.right.right = new Node(19);
 function isMirror(root){
     return isMirrorHelper(root.left, root.right);
 }
