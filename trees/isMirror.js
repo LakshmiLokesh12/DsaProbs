@@ -1,3 +1,12 @@
+
+class Node{
+    constructor(data){
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
 function isMirror(root){
     return isMirrorHelper(root.left, root.right);
 }
