@@ -1,3 +1,13 @@
+
+class Node{
+    constructor(data){
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+
 function lowestCommonAncestor(root, node1, node2){ //LCA
     if(root == null){ //base case - 1
         return null;
