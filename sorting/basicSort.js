@@ -42,14 +42,14 @@ let arr1 = [
 ];
 
 
-// console.log(arr1);
-// arr1.sort(compare2d);
-// console.log(arr1);
+console.log(arr1);
+arr1.sort(compare2d);
+console.log(arr1);
 
 
-// let compareString = (a, b) => b.localeCompare(a);
-// let compareChar = (a, b) => b[0].localeCompare(a[0]);
-// let arr2 = ["cjdsfl", "hkfdshfk", "fflhdsl", "fhlldsf"];
-// console.log(arr2);
-// arr2.sort(compareString);
-// console.log(arr2);
+let compareString = (a, b) => b.localeCompare(a);
+let compareChar = (a, b) => b[0].localeCompare(a[0]);
+let arr2 = ["cjdsfl", "hkfdshfk", "fflhdsl", "fhlldsf"];
+console.log(arr2);
+arr2.sort(compareString);
+console.log(arr2);
