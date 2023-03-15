@@ -22,6 +22,7 @@ console.log(arr.sort());
    }
 }
 
-let arr = [2, 5, 10, 6, 4, 1,7,1];
-let sum = 10;
+//let arr = [2, 5, 10, 6, 4, 1,7,1];
+let arr = [8,7,6,3,1,2,1]
+let sum = 11;
 getTriplet(arr, sum);
