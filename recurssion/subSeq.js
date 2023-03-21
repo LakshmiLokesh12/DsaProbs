@@ -13,4 +13,5 @@ function subsequences(output, input){
     subsequences(output, ros); //exclude
 }
 
-subsequences("", "abc");
+//subsequences("", "abc");
+subsequences("","abcd")
