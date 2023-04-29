@@ -56,3 +56,41 @@ function solve(arr1,k){
 
     }
 }
+
+
+/**
+ * Un Special Numbers
+UN SPECIAL NUMBERS
+Problem Statement
+You are given an array A of N integers. You are also given M unspecial integers.
+ You have to tell the longest possible length of a subarray of array A which contains 
+ at most K unspecial integers.
+Note :
+Each occurrence of a unspecial integer is counted separately.
+See sample test case for more clarity on the question.
+Input Format
+First line contains three space separated integers denoting N, M and K.
+Next line contains N space separated integers denoting elements of array A.
+Next line contains M space separated integers denoting the unspecial integers.
+Output Format
+Print the longest possible length of a subarray of array A which contains at most K
+ unspecial integers.
+Constraints
+1<=N,M<=105
+1<=K<=N
+1<=Ai<=109
+1<=Unspecial integers<=109
+All unspecial integers are distinct from each other.
+Sample Input 1
+5 2 2
+1 2 3 2 5
+3 2
+Sample Output 1
+3
+Explanation of Sample 1
+Take Subarray A3..5 = [3,2,5]
+It has 2 unspecial integers 3 and 2.
+Note that we cannot take the entire array as there are two occurrences of 2 in it and 
+one occurrence of 3. Hence the count of unspecial integers in the entire array = 2+1 = 3.
+ * 
+ */
