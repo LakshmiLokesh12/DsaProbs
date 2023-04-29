@@ -94,3 +94,34 @@ Note that we cannot take the entire array as there are two occurrences of 2 in i
 one occurrence of 3. Hence the count of unspecial integers in the entire array = 2+1 = 3.
  * 
  */
+
+
+function solve(A,M,n,m,k)
+{
+
+}
+
+var subarrayWithDist = function(a,t){
+    var atLeast = function(a,t){
+        let n = a.length;
+        let m = new Map();
+        let cc = 0;
+        let uniq = 0;
+        let R = 0;
+        for(let L=0 ; L<n ; L++){
+            for(;R<n && uniq <t; R++){
+                if(!m.has(a[R])) uniq++;
+                m.set(a[R],(m.get(a[R]) || 0) +1);
+            }
+            cc +=R;
+            if(uniq >=t) cc--;
+            m.set(a[L],(m.get(a[L]) || 0)-1);
+            if(m.get(a[L]) === 0){
+                m.delete(a[L]);
+                uniq--;
+            }
+        }
+        return cc;
+    };
+    return atLeast(a,t+1) = atLeast(a,t);
+};
