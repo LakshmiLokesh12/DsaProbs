@@ -46,3 +46,13 @@ In 1st operation, she choses K = 2, so A = [1, 0, 1]
 In 2nd operation she choses K = 3, so A = [ 2, 1, 1]
 Now for each i (1<=i<=3), Ai = Bi
 */
+
+
+let arr1 = [0,0,0]
+let arr2 = [2,1,1]
+function solve(arr1,k){
+    if (k <=arr1[n-1]){
+
+
+    }
+}
