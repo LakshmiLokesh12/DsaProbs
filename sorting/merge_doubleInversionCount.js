@@ -69,3 +69,5 @@ mergeSort(arr, 0, 4);
 console.log(arr);
 
 console.log(inversionCount);
+
+//mergesort
